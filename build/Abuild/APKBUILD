@@ -5,7 +5,7 @@
 # Maintainer: Felix Xing <fxing@qnx.com>
 pkgname=valkey
 pkgver=9.0.0
-pkgrel=${pkgrel:-0}
+pkgrel=1
 pkgdesc="Open source high-performance key/value datastore (fork of Redis)"
 url="https://valkey.io/"
 arch="all"
@@ -124,7 +124,6 @@ compat() {
 	rm "$subpkgdir"/usr/bin/redis-benchmark
 }
 
-options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 387e8ebf26a307940bf0f26eb4ba51f016445a618435f4c61ec4c8b8d4b7e2cbfc7a7e93b6c35b7c6832e3161981b4b2ce0d09bdc1799dbb5271052cf70654e4  valkey-9.0.0.tar.gz
 dd5780f8e15ebf9661cade2791684509f1df41d83c6e7f2a477018823cfbbad906ca22f1cff59f7c220039e0c2aa8c2b1855dc3cba0f482590861818900df22a  fix-IOV_MAX.patch
